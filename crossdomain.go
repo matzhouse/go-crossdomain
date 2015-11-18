@@ -16,6 +16,6 @@ func (*c CDHandler) serveHTTP(w http.ResponseWriter, r *http.Request) {
 
   // serve the relevant crossdomain.xml stuff here
   // simple to begin
-  fmt.Sprintf("<?xml version="1.0" ?> \n <cross-domain-policy> \n <allow-access-from domain="*" /> \n </cross-domain-policy>"
+  fmt.Fprint(w, "<?xml version="1.0" ?> \n <cross-domain-policy> \n <allow-access-from domain="*" /> \n </cross-domain-policy>"
 )
 }
